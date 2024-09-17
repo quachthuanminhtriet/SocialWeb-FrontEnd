@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ---- GRID IMAGE POSTED LAYOUT ---- */
+
+
+.grid-style {
+  .grid-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .grid-col {
+      overflow: hidden;
+      border-radius: 3px;
+      &.horizontal {
+        max-height: 250px;
+      }
+      
+      &.vertical {
+        max-height: 570px;
+      }
+
+
+      img {
+        width: 100%;
+      }
+  }
+}
+
+

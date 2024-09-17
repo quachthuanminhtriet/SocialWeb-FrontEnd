@@ -1,0 +1,97 @@
+.MiniFriendship {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    .mini-friendship_title {
+        margin-bottom: 20px;
+        p:nth-child(1) {
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0;
+            text-align: right;
+        }
+        p:nth-child(2) {
+            font-weight: 300;
+            font-size: 14px;
+            text-align: right;
+        }
+    }
+    .mini-friendship_list {
+        padding-left: 20px;
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .friend-tag {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+
+            .info {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                font-weight: 500;
+                p {
+                    margin: 0;
+                }
+
+                p:nth-child(1) {
+                    font-size: 16px;
+                }
+                p:nth-child(2) {
+                    font-size: 12px;
+                    font-weight: 400;
+                    
+                }
+                .status-online {
+                    color: rgba(21, 174, 21, 0.858);
+                }
+
+                .status-offline {
+                    color: rgba(191, 56, 6, 0.94);
+                }
+            }
+            .avatar {
+                flex-basis: 45px;
+                min-width: 45px;
+                min-height: 45px;
+                max-height: 45px;
+                flex-shrink: 1;
+                padding: 4px;
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid #ddd;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    .view-more {
+        font-size: 14px;
+        text-align: right;
+        cursor: pointer;
+        color: #ccc;
+        &:hover {
+            color: #bbb;
+        }
+    }
+}

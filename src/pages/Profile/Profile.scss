@@ -1,0 +1,210 @@
+.Profile {
+    position: relative;
+    overflow-x: hidden;
+    padding: 32px 0px;
+    .blank-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        gap: 40px;  
+        .blank-image {
+            width: 400px;
+            img {
+                width: 100%;
+            }
+        }
+        .blank-text {
+            font-size: 18px;
+            p {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .blank-profile-update {
+            button {
+                border: none;
+                outline: none;
+                padding: 10px 26px;
+                border-radius: 6px;
+                background-color: #17729d;
+                color: white;
+            }
+        }
+    }
+    .user-information {
+        min-height: 580px;
+        margin-bottom: 40px;
+        .user-information_container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .wallpaper {
+                width: 100%;
+                flex-basis: 350px;
+                min-height: 350px;
+                background-color: yellow;
+                border-radius: 10px;
+                overflow: hidden;
+                max-height: 350px;
+                height: 350px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: brightness(72%);
+                }
+            }
+            .information {
+                // background-color: rgb(16, 16, 142);
+                flex-grow: 1;
+                margin-top: 22px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .information-l {
+                    flex-basis: 60%;
+                    flex-shrink: 1;
+                    max-width: 60%;
+                    .name {
+                        text-transform: capitalize;
+                        font-weight: 800;
+                        font-size: 38px;
+                        width: 100%;
+                        p {
+                            margin: 0;
+                            line-height: 40px;
+                        }
+                    }
+
+                    .student-info {
+                        padding-left: 2px;
+
+                        p {
+                            text-transform: capitalize;
+                            margin: 0;
+                        }
+                        .university {
+                            font-size: 26px;
+                            text-transform: uppercase;
+                        }
+
+                        .major {
+                            display: flex;
+                            gap: 10px;
+                            p:nth-child(1) {
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                color: #1f487e;
+                                span {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .information-r {
+                    flex-grow: 1;
+                    display: flex;
+                    gap: 10px;
+                    .edit {
+                        cursor: pointer;
+                        padding: 4px 14px;
+                        background-color: #ddd;
+                        border-radius: 4px;
+                        user-select: none;
+                    }
+                    .friends {
+                        cursor: pointer;
+                        padding: 4px 10px;
+                        background-color: #ddd;
+                        border-radius: 4px;
+                        user-select: none;
+                    }
+                }
+            }
+
+            .intro {
+                margin-top: 40px;
+                max-width: 70%;
+                p {
+                    font-size: 14px;
+                }
+                h5 {
+                    font-size: 18px;
+                }
+            }
+
+            .avatar {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                background-color: red;
+                border-radius: 50%;
+                top: calc(220px);
+                right: -70px;
+                overflow: hidden;
+                border: 6px solid white;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .user-posted {
+        .title {
+            margin-bottom: 40px;
+            h5 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .pins-row {
+        column-gap: 10px;
+        column-width: calc(300px);
+        counter-reset: item;
+        list-style: none;
+        width: 100%;
+        .pins-col {
+            align-items: stretch;
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            counter-increment: item;
+            display: flex;
+            height: auto;
+            justify-content: center;
+            padding-bottom: 10px;
+            img {
+                width: 100%;
+            }
+
+            &:nth-child(even) {
+                height: auto;
+
+                &:after {
+                    background: #17729d;
+                }
+            }
+
+            &:nth-child(3n) {
+                height: auto;
+
+                &:after {
+                    background: rgb(106, 165, 60);
+                }
+            }
+        }
+    }
+}

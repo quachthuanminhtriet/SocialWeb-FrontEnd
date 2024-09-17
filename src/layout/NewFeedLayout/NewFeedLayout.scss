@@ -1,0 +1,35 @@
+.NewFeedLayout {
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+    .layout-main {
+        display: flex;
+        height: fit-content;
+        min-height: 100vh;
+        .layout-main__sidebar {
+            flex-basis: 245px;
+            height: auto;
+            flex-shrink: 1;
+            position: relative;
+            border-right: 1px solid #ddd;
+        }
+
+        .layout-main__container {
+            flex-grow: 1;
+            .container {
+                height: 100%;
+                .row {
+                    height: 100%;
+                }
+            }
+
+            .personal-side {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+        }
+    }
+}

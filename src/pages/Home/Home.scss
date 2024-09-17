@@ -1,0 +1,46 @@
+.Home {
+    height: 100%;
+    position: relative;
+    .reel-section {
+        margin-bottom: 20px;
+    }
+    .post-create-btn {
+        position: fixed;
+        z-index: 1000;
+        bottom: 8%;
+        left: 4%;
+        min-width: 120px;
+        padding: 0px 30px;
+        display: flex;
+        height: 50px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+        border: 1px solid #ddd;
+        background-color: white;
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        }
+        cursor: pointer;
+        i {
+            font-size: 30px;
+        }
+
+        span {
+            user-select: none;
+        }
+    }
+
+    .personal-side {
+        height: 100%;
+        position: relative;
+        .personal-side_container {
+            position: sticky;
+            top: 24px;
+            .mini-profile {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
